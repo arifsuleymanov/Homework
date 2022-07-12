@@ -18,7 +18,7 @@ public class Homework2 {
         System.out.println("All set. Get ready to rumble!");
         int numberOfRandoms = rnd.nextInt(size);
 
-        // creating view array with only lines
+        // initializing empty front array
         String[][] arrayForView = new String[size][size];
         for (int i = 0; i <= size - 1; i++) {
             for (int j = 0; j <= size - 1; j++) {
@@ -32,7 +32,7 @@ public class Homework2 {
             }
         }
 
-        // initializing empty  back array
+        // initializing empty back array
         for (int i = 0; i <= size - 1; i++) {
             for (int j = 0; j <= size - 1; j++) {
                 array[0][j] = String.valueOf(j);
@@ -45,7 +45,7 @@ public class Homework2 {
             }
         }
 
-        // front of view array
+        // print view array
         for (int i = 0; i <= size - 1; i++) {
             for (int j = 0; j <= size - 1; j++) {
                 String frontView = String.format(" %s |", array[i][j]);
@@ -60,16 +60,17 @@ public class Homework2 {
         }
         System.out.println("========================");
 
-        // back view
-        for (int i = 0; i <= size - 1; i++) {
-            for (int j = 0; j <= size - 1; j++) {
-                String backView = String.format(" %s |", array[i][j]);
-                System.out.print(backView);
-            }
-            System.out.println();
-        }
+        // TODO FOR MENTORS: UNCOMMENT THIS FIELD TO SEE BACK OF ARRAY
+        // print back array
+//        for (int i = 0; i <= size - 1; i++) {
+//            for (int j = 0; j <= size - 1; j++) {
+//                String backView = String.format(" %s |", array[i][j]);
+//                System.out.print(backView);
+//            }
+//            System.out.println();
+//        }
 
-        //checking
+        // checking process
         for (int k = 1; k <= size - 1; k++) {
             for (int l = 1; l <= size - 1; l++) {
                 System.out.print("Enter indexes of 2D array: ");
@@ -94,6 +95,7 @@ public class Homework2 {
         }
     }
 
+    // print the view array
     public static void print(String[][] arrayForView, int size) {
         for (int i = 0; i <= size - 1; i++) {
             for (int j = 0; j <= size - 1; j++) {
