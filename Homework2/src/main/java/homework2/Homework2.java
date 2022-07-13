@@ -1,4 +1,4 @@
-package homework;
+package homework2;
 
 import java.util.Random;
 import java.util.Scanner;
@@ -61,14 +61,14 @@ public class Homework2 {
         System.out.println("========================");
 
         // TODO FOR MENTORS: UNCOMMENT THIS FIELD TO SEE BACK OF ARRAY
-        // print back array
-//        for (int i = 0; i <= size - 1; i++) {
-//            for (int j = 0; j <= size - 1; j++) {
-//                String backView = String.format(" %s |", array[i][j]);
-//                System.out.print(backView);
-//            }
-//            System.out.println();
-//        }
+//         print back array
+        for (int i = 0; i <= size - 1; i++) {
+            for (int j = 0; j <= size - 1; j++) {
+                String backView = String.format(" %s |", array[i][j]);
+                System.out.print(backView);
+            }
+            System.out.println();
+        }
 
         // checking process
         for (int k = 1; k <= size - 1; k++) {
