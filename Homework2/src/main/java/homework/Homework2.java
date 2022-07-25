@@ -54,21 +54,36 @@ public class Homework2 {
             System.out.println();
         }
 
-        // adding randoms to back array
-        for (int i = 1; i <= numberOfRandoms; i++) {
-            array[rnd.nextInt(max - min) + min][rnd.nextInt(max - min) + min] = "o";
+        // show back array
+        int random = rnd.nextInt(2);
+        int randomPosition = size-1-3-rnd.nextInt(size-3)+min;
+        int iteration = rnd.nextInt(size-3+min);
+
+        if (random==0){ // horizontal
+            for (int j = iteration; j <= iteration+2; j++) {
+                array[randomPosition][j] = "o";
+
+            }
+            System.out.println("========================");
         }
-        System.out.println("========================");
+
+        if (random==1) {
+            for (int j = iteration; j <= iteration+2; j++) {
+                array[j][iteration] = "o";
+
+            }
+            System.out.println("========================");
+        }
 
         // TODO FOR MENTORS: UNCOMMENT THIS FIELD TO SEE BACK OF ARRAY
         // print back array
-//        for (int i = 0; i <= size - 1; i++) {
-//            for (int j = 0; j <= size - 1; j++) {
-//                String backView = String.format(" %s |", array[i][j]);
-//                System.out.print(backView);
-//            }
-//            System.out.println();
-//        }
+        for (int i = 0; i <= size - 1; i++) {
+            for (int j = 0; j <= size - 1; j++) {
+                String backView = String.format(" %s |", array[i][j]);
+                System.out.print(backView);
+            }
+            System.out.println();
+        }
 
         // checking process
         for (int k = 1; k <= size - 1; k++) {
