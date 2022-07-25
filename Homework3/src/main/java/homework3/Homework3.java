@@ -144,6 +144,7 @@ public class Homework3 {
             }
         }
 
+        // exit and retry operation
         if (day.equals("Exit")) {
             retry = false;
         } else if (day.contains("Change")) {
