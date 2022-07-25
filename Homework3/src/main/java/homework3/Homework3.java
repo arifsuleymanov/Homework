@@ -116,29 +116,15 @@ public class Homework3 {
     // checking the String and updating task
     public static void checker(String[][] schedule, String[] daysOfWeek, String day, boolean retry) {
         Scanner in = new Scanner(System.in);
+        // checking
         for (int i = 0; i <= 6; i++) {
             if (!day.equals(daysOfWeek[i])) {
                 retry = true;
                 continue;
             }
-//            if (!day.contains("Exit")) {
-//                String updatedDay = day.toLowerCase();
-//                String change = updatedDay.substring(0, 7);
-//                String firstSymbol = String.valueOf(day.charAt(7)).toUpperCase();
-//                String concatStrings = change + firstSymbol + day.substring(8);
-//                if (concatStrings.equals("change " + daysOfWeek[i])) {
-//                    System.out.print("You have " + (schedule[i].length - 1) + " tasks. \nPlease, input the index of task to change.");
-//                    int taskNumber = in.nextInt();
-//                    System.out.print("Please, input new tasks for " + daysOfWeek[i] + ". ");
-//                    in.nextLine();
-//                    schedule[i][taskNumber] = in.nextLine();
-//                    System.out.println("Task updated for " + daysOfWeek[i]);
-//                    retry = false;
-//                    break;
-//                }
-//            }
         }
 
+        // operation with change
         for (int i = 0; i <= 6; i++) {
             if (!day.contains("Exit")) {
                 String updatedDay = day.toLowerCase();
