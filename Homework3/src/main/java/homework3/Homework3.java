@@ -11,7 +11,7 @@ public class Homework3 {
         String[] daysOfWeek = {"Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"};
         addDaysOfWeek(schedule, m, daysOfWeek);
         addTasks(schedule);
-        printTasks(schedule, n, daysOfWeek, retry);
+        printTasks(schedule, n, daysOfWeek, false);
     }
 
     // add days of the week
@@ -119,14 +119,34 @@ public class Homework3 {
         for (int i = 0; i <= 6; i++) {
             if (!day.equals(daysOfWeek[i])) {
                 retry = true;
+                continue;
             }
+//            if (!day.contains("Exit")) {
+//                String updatedDay = day.toLowerCase();
+//                String change = updatedDay.substring(0, 7);
+//                String firstSymbol = String.valueOf(day.charAt(7)).toUpperCase();
+//                String concatStrings = change + firstSymbol + day.substring(8);
+//                if (concatStrings.equals("change " + daysOfWeek[i])) {
+//                    System.out.print("You have " + (schedule[i].length - 1) + " tasks. \nPlease, input the index of task to change.");
+//                    int taskNumber = in.nextInt();
+//                    System.out.print("Please, input new tasks for " + daysOfWeek[i] + ". ");
+//                    in.nextLine();
+//                    schedule[i][taskNumber] = in.nextLine();
+//                    System.out.println("Task updated for " + daysOfWeek[i]);
+//                    retry = false;
+//                    break;
+//                }
+//            }
+        }
+
+        for (int i = 0; i <= 6; i++) {
             if (!day.contains("Exit")) {
                 String updatedDay = day.toLowerCase();
                 String change = updatedDay.substring(0, 7);
                 String firstSymbol = String.valueOf(day.charAt(7)).toUpperCase();
                 String concatStrings = change + firstSymbol + day.substring(8);
                 if (concatStrings.equals("change " + daysOfWeek[i])) {
-                    System.out.print("You have " + (schedule[i].length - 1) + " tasks. \nPlease, input the index of task to change.");
+                    System.out.print("You have " + (schedule[i].length - 1) + " tasks. \nPlease, input the index of task to change: ");
                     int taskNumber = in.nextInt();
                     System.out.print("Please, input new tasks for " + daysOfWeek[i] + ". ");
                     in.nextLine();
