@@ -100,7 +100,7 @@ public class Homework2 {
                     print(arrayForView, size);
                 }
 
-                if (found == numberOfRandoms) {
+                if (found == 3) {
                     System.out.println("You have won!");
                     print(arrayForView, size);
                     k=size-1;
