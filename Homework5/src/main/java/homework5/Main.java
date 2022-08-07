@@ -10,15 +10,16 @@ public class Main {
         Human father = new Human("John", "Smith", 1900);
         Family happyFamily = new Family(mother, father);
 
-        Human anderson = new Human("Anderson", "Gutenberg", 198, 100, happyFamily, new String[][]{{"monday", "do magic"}});
-        Human fisher = new Human("Fisher", "Mayer", 167, 100, happyFamily, new String[][]{{"monday,do something"}});
+        Human anderson = new Human("Anderson", "Gutenberg", 198, 100, happyFamily, new String[][]{{"monday", "do " +
+                "magic"}, {"friday", "buy a coffee"}});
+        Human fisher = new Human("Fisher", "Mayer", 167, 100, happyFamily, new String[][]{{"monday, fly in the sky"}});
 
         happyFamily.setPet(pet);
         happyFamily.addChild(anderson);
         happyFamily.addChild(fisher);
 
+        happyFamily.deleteChild(1);
         System.out.println(happyFamily + " = " + happyFamily.countFamily(happyFamily));
-        happyFamily.deleteChild(3);
-        System.out.println(happyFamily);
+
     }
 }

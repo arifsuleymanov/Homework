@@ -1,7 +1,5 @@
 package lesson4;
 
-import java.util.Arrays;
-
 public class Human extends Pet{
     public String name;
     public String surname;

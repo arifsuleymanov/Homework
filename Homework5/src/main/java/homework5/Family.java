@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class Family {
     private Human mother;
     private Human father;
-    private Human[] children;
+    private Human[] children = new Human[0];
     private Pet pet;
 
     public Family(Human mother, Human father) {
@@ -82,7 +82,8 @@ public class Family {
                 children[i] = getChildren()[i];
 
             }
-            children[getChildren().length - 1] = child;
+
+            children[getChildren().length] = child;
             setChildren(children);
             child.setFamily(this);
         } else {
@@ -97,6 +98,7 @@ public class Family {
             Human[] children = new Human[getChildren().length - 1];
             if (children.length == 0) {
                 children = new Human[0];
+                System.out.println("This family doesn't have children yet!");
             } else {
                 for (int i = 0, k = 0; i < children.length; i++) {
                     if (i == index) {
@@ -111,7 +113,28 @@ public class Family {
         return false;
     }
 
-    public static int countFamily(Family family){
+//    public boolean deleteChild1(int index){
+//        if (index > getChildren().length - 1) {
+//            getChildren();
+//        } else {
+//            Human[] children = new Human[getChildren().length - 1];
+//            if (children.length == 0) {
+//                children = new Human[0];
+//            } else {
+//                for (int i = 0, k = 0; i < children.length; i++) {
+//                    if (i == index) {
+//                        continue;
+//                    }
+//                    children[k++] = getChildren()[i];
+//                }
+//            }
+//            setChildren(children);
+//            return true;
+//        }
+//        return false;
+//    }
+
+    public int countFamily(Family family){
         return family.getChildren().length + 2;
     }
 

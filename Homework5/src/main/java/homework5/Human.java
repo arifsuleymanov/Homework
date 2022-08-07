@@ -107,7 +107,7 @@ public class Human {
                 ", surname='" + surname + '\'' +
                 ", year=" + year +
                 ", iq=" + iq +
-                ", schedule=" + Arrays.toString(schedule) +
+                ", schedule=" + Arrays.deepToString(schedule) +
                 '}';
     }
 }
