@@ -75,7 +75,6 @@ public class Family {
             Human[] children = new Human[getChildren().length - 1];
             if (children.length == 0) {
                 children = new Human[0];
-                System.out.println("This family doesn't have children yet!");
             } else {
                 for (int i = 0, k = 0; i < children.length; i++) {
                     if (i == index) {
