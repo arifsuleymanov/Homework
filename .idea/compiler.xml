@@ -11,10 +11,12 @@
         <module name="Homework1" />
         <module name="Homework6" />
         <module name="Homework4" />
+        <module name="Homeworkk7" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Homework5" target="11" />
+      <module name="Homework7" target="11" />
     </bytecodeTargetLevel>
   </component>
 </project>
