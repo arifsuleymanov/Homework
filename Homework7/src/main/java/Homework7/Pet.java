@@ -1,9 +1,6 @@
 package Homework7;
 
-
-
 import Homework7.enums.Species;
-
 import java.util.Arrays;
 import java.util.Objects;
 
@@ -17,13 +14,13 @@ public abstract class Pet {
     public Pet() {
     }
 
-    public Pet(Species species, String nickname) {
-        this.species = species;
+    public Pet(String nickname) {
         this.nickname = nickname;
+        this.species = Species.UNKNOWN;
     }
 
-    public Pet(Species species, String nickname, Integer age, Integer trickLevel, String[] habits) {
-        this.species = species;
+    public Pet(String nickname, Integer age, Integer trickLevel, String[] habits) {
+        this.species = Species.UNKNOWN;
         this.nickname = nickname;
         this.age = age;
         this.trickLevel = trickLevel;
@@ -70,18 +67,6 @@ public abstract class Pet {
         this.habits = habits;
     }
 
-    public void eat() {
-        System.out.println("I am eating");
-    }
-
-    public void respond(String nickname){
-        System.out.println("Hello, owner. I am - "+ nickname+(". I miss you!"));
-    }
-
-    public void foul() {
-        System.out.println("I need to cover it up");
-    }
-
     @Override
     public String toString() {
         return  species.name().toLowerCase() +
@@ -107,6 +92,12 @@ public abstract class Pet {
         result = 31 * result + Arrays.hashCode(habits);
         return result;
     }
+
+    public void eat() {
+        System.out.println("I am eating");
+    }
+
+    public abstract void respond();
 
     @Override
     protected void finalize() throws Throwable {
