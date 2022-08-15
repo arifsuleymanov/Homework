@@ -1,5 +1,7 @@
 package Homework7;
 
+import Homework7.humans.Man;
+
 import java.util.Arrays;
 import java.util.Objects;
 
@@ -8,6 +10,7 @@ public class Human {
     private String surname;
     private Integer year;
     private Integer iq;
+    private String gender;
     private Family family;
     private String[][] schedule;
 
@@ -18,6 +21,25 @@ public class Human {
         this.name = name;
         this.surname = surname;
         this.year = year;
+
+        if (this instanceof Man) {
+            this.gender = "Man";
+        } else {
+            this.gender = "Woman";
+        }
+    }
+
+    public Human(String name, String surname, Integer year, Integer iq) {
+        this.name = name;
+        this.surname = surname;
+        this.year = year;
+        this.iq = iq;
+
+        if (this instanceof Man) {
+            this.gender = "Man";
+        } else {
+            this.gender = "Woman";
+        }
     }
 
     public Human(String name, String surname, Integer year, Integer iq, Family family) {
@@ -26,6 +48,12 @@ public class Human {
         this.year = year;
         this.iq = iq;
         this.family = family;
+
+        if (this instanceof Man) {
+            this.gender = "Man";
+        } else {
+            this.gender = "Woman";
+        }
     }
 
     public Human(String name, String surname, Integer iq, Integer year, Family family, String[][] schedule) {
@@ -35,6 +63,12 @@ public class Human {
         this.year = year;
         this.family = family;
         this.schedule = schedule;
+
+        if (this instanceof Man) {
+            this.gender = "Man";
+        } else {
+            this.gender = "Woman";
+        }
     }
 
     public String getName() {
@@ -59,6 +93,20 @@ public class Human {
 
     public void setYear(Integer year) {
         this.year = year;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public void setGender(String gender) {
+
+        if (this instanceof Man) {
+            this.gender = "Man";
+        } else {
+            this.gender = "Woman";
+        }
+
     }
 
     public Integer getIq() {
@@ -115,6 +163,10 @@ public class Human {
                 ", iq=" + iq +
                 ", schedule=" + Arrays.deepToString(schedule) +
                 '}';
+    }
+
+    public void greetPet() {
+        System.out.println("Hi pet");
     }
 }
 
