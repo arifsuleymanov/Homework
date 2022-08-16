@@ -1,7 +1,11 @@
 package Homework8.humans;
 
-import Homework7.Family;
-import Homework7.Human;
+
+import Homework8.Family;
+import Homework8.Human;
+import Homework8.enums.DayOfWeek;
+
+import java.util.Map;
 
 public class Man extends Human {
 
@@ -12,7 +16,7 @@ public class Man extends Human {
         super(name, surname, year, iq);
     }
 
-    public Man(String name, String surname, Integer iq, Integer year, Family family, String[][] schedule) {
+    public Man(String name, String surname, Integer iq, Integer year, Family family, Map<DayOfWeek, String> schedule) {
         super(name, surname, iq, year, family, schedule);
     }
 

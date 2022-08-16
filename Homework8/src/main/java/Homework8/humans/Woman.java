@@ -1,10 +1,12 @@
 package Homework8.humans;
 
-import Homework7.Family;
-import Homework7.Human;
-import Homework7.interfaces.HumanCreator;
+import Homework8.Family;
+import Homework8.Human;
+import Homework8.enums.DayOfWeek;
+import Homework8.interfaces.HumanCreator;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Random;
 
 public class Woman extends Human implements HumanCreator {
@@ -20,7 +22,7 @@ public class Woman extends Human implements HumanCreator {
         super(name, surname, year, iq);
     }
 
-    public Woman(String name, String surname, Integer iq, Integer year, Family family, String[][] schedule) {
+    public Woman(String name, String surname, Integer iq, Integer year, Family family, Map<DayOfWeek, String> schedule) {
         super(name, surname, iq, year, family, schedule);
     }
 
@@ -61,7 +63,7 @@ public class Woman extends Human implements HumanCreator {
     // Advanced level: name determination
     public String childRandomName(Human child) {
         Random random = new Random();
-        List<String> maleNames = List.of("James", "John", "Michael", "Rodriguez", "Padre");
+        List<String> maleNames = List.of("James", "Mayer", "Michael", "Rodriguez", "Padre");
         List<String> femaleNames = List.of("Kleopatra", "Anksunamun", "Jennifer", "April", "Catrin");
 
         return (child instanceof Man ) ? maleNames.get(random.nextInt(4)) : femaleNames.get(random.nextInt(4));

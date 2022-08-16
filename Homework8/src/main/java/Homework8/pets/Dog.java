@@ -1,8 +1,10 @@
 package Homework8.pets;
 
-import Homework7.Pet;
-import Homework7.enums.Species;
-import Homework7.interfaces.Foul;
+import Homework8.Pet;
+import Homework8.enums.Species;
+import Homework8.interfaces.Foul;
+
+import java.util.Set;
 
 public class Dog extends Pet implements Foul {
 
@@ -10,7 +12,7 @@ public class Dog extends Pet implements Foul {
         super.setSpecies(Species.DOG);
     }
 
-    public Dog(String nickname, Integer age, Integer trickLevel, String[] habits) {
+    public Dog(String nickname, Integer age, Integer trickLevel, Set<String> habits) {
         super(nickname, age, trickLevel, habits);
         super.setSpecies(Species.DOG);
     }
