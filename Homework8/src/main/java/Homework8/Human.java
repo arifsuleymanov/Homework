@@ -1,6 +1,8 @@
 package Homework8;
 
-import Homework7.humans.Man;
+
+import Homework8.enums.DayOfWeek;
+import Homework8.humans.Man;
 
 import java.util.Map;
 import java.util.Objects;
@@ -12,9 +14,14 @@ public class Human {
     private Integer iq;
     private String gender;
     private Family family;
-    private Map<String, String> schedule;
+    private Map<DayOfWeek, String> schedule;
 
     public Human() {
+        if (this instanceof Man) {
+            this.gender = "Man";
+        } else {
+            this.gender = "Woman";
+        }
     }
 
     public Human(String name, String surname, Integer year) {
@@ -56,7 +63,7 @@ public class Human {
         }
     }
 
-    public Human(String name, String surname, Integer iq, Integer year, Family family, Map<String, String> schedule) {
+    public Human(String name, String surname, Integer iq, Integer year, Family family, Map<DayOfWeek, String> schedule) {
         this.name = name;
         this.surname = surname;
         this.iq = iq;
@@ -125,11 +132,11 @@ public class Human {
         this.family = family;
     }
 
-    public Map<String, String> getSchedule() {
+    public Map<DayOfWeek, String> getSchedule() {
         return schedule;
     }
 
-    public void setSchedule(Map<String, String> schedule) {
+    public void setSchedule(Map<DayOfWeek, String> schedule) {
         this.schedule = schedule;
     }
 

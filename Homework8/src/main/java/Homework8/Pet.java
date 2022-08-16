@@ -1,6 +1,7 @@
 package Homework8;
 
-import Homework7.enums.Species;
+import Homework8.enums.Species;
+
 import java.util.Objects;
 import java.util.Set;
 
