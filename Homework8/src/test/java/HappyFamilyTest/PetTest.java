@@ -1,8 +1,6 @@
 package HappyFamilyTest;
 
 import Homework8.Pet;
-import Homework8.enums.Species;
-import Homework8.pets.Dog;
 import Homework8.pets.DomesticCat;
 import Homework8.pets.Fish;
 import org.junit.jupiter.api.Test;
