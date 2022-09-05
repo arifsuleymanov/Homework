@@ -1,9 +1,10 @@
 package Homework9.humans;
 
 
-import Homework8.Family;
-import Homework8.Human;
-import Homework8.enums.DayOfWeek;
+import Homework9.Family;
+import Homework9.Human;
+import Homework9.enums.DayOfWeek;
+import Homework9.Human;
 
 import java.util.Map;
 

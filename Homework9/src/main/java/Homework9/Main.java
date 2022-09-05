@@ -8,9 +8,9 @@ import Homework9.humans.Man;
 import Homework9.humans.Woman;
 import Homework9.pets.Dog;
 import Homework9.pets.DomesticCat;
+import Homework9.pets.Fish;
 import Homework9.service.FamilyService;
 
-import java.util.HashSet;
 import java.util.Set;
 
 public class Main {
@@ -18,26 +18,45 @@ public class Main {
 
         FamilyController familyController = config();
 
-        Woman mother = new Woman("Jessica", "Smith", 1910, 199);
-        Man father = new Man("John", "Smith", 27, 200);
-//        Family happyFamily = new Family(mother, father);
-//        father.swimmingAtPool();
-//        mother.goToHospital();
-//        mother.greetPet();
-//
-//        Pet domesticCat = new DomesticCat( "Masito", 3, 78, Set.of("meow", "eating", "sleeping"));
-//        domesticCat.respond();
-//        Pet dog = new Dog( "Bobik", 5, 87, Set.of("barking", "swimming", "playing"));
-//        dog.respond();
-//        Set<Pet> pets = new HashSet<>();
-//        pets.add(domesticCat);
-//        pets.add(dog);
-//        happyFamily.setPet(pets);
-//
-//        // Advanced level: born a child
-//        mother.bornChild(happyFamily, father);
+        Set<String> habits = Set.of("barking", "sleeping", "playing");
+        Pet bobby = new Dog("bobby", 1, 23, habits);
+        Pet catty = new DomesticCat("catty", 2, 67, habits);
+        Pet futty = new Fish("Futty", 3, 11, habits);
 
-//        System.out.println(happyFamily);
+        Woman motherJessicca = new Woman("Jessica", "Smith", 1910, 199);
+        Man fatherJohn = new Man("John", "Smith", 27, 200);
+        Family smithFamily = new Family(motherJessicca, fatherJohn);
+        Human adoptedChild = new Woman("Cristina", "Fernandez", 2009, 79);
+
+        // controller
+        Family familySmith = familyController.createNewFamily(motherJessicca, fatherJohn);
+        familyController.bornChild(familySmith);
+        familyController.adoptChild(smithFamily, adoptedChild);
+        familyController.bornChild(smithFamily);
+        familyController.bornChild(smithFamily);
+        familyController.bornChild(smithFamily);
+        familyController.bornChild(smithFamily);
+        familyController.bornChild(smithFamily);
+        familyController.bornChild(smithFamily);
+        familyController.bornChild(smithFamily);
+//        familyController.addPet(smithFamily, bobby);
+//        familyController.addPet(smithFamily, catty);
+//        familyController.addPet(smithFamily, futty);
+        familyController.displayAllFamilies();
+        familyController.getAllfamilies();
+        familyController.count();
+        familyController.getFamiliesBiggerThan(1);
+        familyController.getFamiliesLessThan(1);
+        familyController.countFamiliesWithMemberNumber(3);
+        familyController.deleteFamilyByIndex(0);
+        familyController.deleteAllChildrenOlderThan(2);
+        familyController.getFamilyById(0);
+//        familyController.getPets(smithFamily);
+
+
+
+
+
     }
 
     private static FamilyController config() {

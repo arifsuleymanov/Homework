@@ -1,6 +1,6 @@
 package Homework9;
 
-import Homework8.enums.Species;
+import Homework9.pets.Species;
 
 import java.util.Objects;
 import java.util.Set;
