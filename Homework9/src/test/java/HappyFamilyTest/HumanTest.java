@@ -1,6 +1,6 @@
 package HappyFamilyTest;
 
-import Homework8.Human;
+import Homework9.Human;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;

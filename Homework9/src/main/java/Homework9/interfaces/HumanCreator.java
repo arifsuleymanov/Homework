@@ -1,7 +1,7 @@
 package Homework9.interfaces;
 
-import Homework8.Family;
-import Homework8.Human;
+import Homework9.Family;
+import Homework9.Human;
 
 public interface HumanCreator {
 

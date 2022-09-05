@@ -1,8 +1,8 @@
 package HappyFamilyTest;
 
-import Homework8.Pet;
-import Homework8.pets.DomesticCat;
-import Homework8.pets.Fish;
+import Homework9.Pet;
+import Homework9.pets.DomesticCat;
+import Homework9.pets.Fish;
 import org.junit.jupiter.api.Test;
 
 import java.util.Set;
