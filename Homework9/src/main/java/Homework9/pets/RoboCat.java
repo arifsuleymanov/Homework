@@ -19,4 +19,5 @@ public class RoboCat extends Pet {
     public void respond() {
         System.out.println(this.getNickname() + ": hi, my lord");
     }
+
 }

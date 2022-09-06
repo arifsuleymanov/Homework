@@ -66,6 +66,7 @@ public class FamilyController {
 
 
 
+
     // null pointer exception(due to work I don't have time to fix it)
 //    public List<Pet> getPets(Family family) {
 //        return familyService.getPets(family);

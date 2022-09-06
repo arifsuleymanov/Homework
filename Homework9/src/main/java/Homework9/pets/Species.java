@@ -27,4 +27,5 @@ public enum Species {
                 ", numberOfLegs=" + numberOfLegs +
                 ", hasFur=" + hasFur + ", ";
     }
+
 }

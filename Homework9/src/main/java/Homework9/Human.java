@@ -175,5 +175,6 @@ public class Human {
     public void greetPet() {
         System.out.println("Hi pet");
     }
+
 }
 
