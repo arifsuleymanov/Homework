@@ -25,4 +25,5 @@ public class DomesticCat extends Pet implements Foul {
     public void respond() {
         System.out.println(this.getNickname() + " miyau");
     }
+
 }

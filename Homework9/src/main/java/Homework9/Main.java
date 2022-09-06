@@ -52,11 +52,6 @@ public class Main {
         familyController.deleteAllChildrenOlderThan(2);
         familyController.getFamilyById(0);
 //        familyController.getPets(smithFamily);
-
-
-
-
-
     }
 
     private static FamilyController config() {
@@ -64,4 +59,5 @@ public class Main {
         FamilyService familyService = new FamilyService(familyDao);
         return new FamilyController(familyService);
     }
+
 }

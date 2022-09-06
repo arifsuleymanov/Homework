@@ -25,4 +25,5 @@ public class Dog extends Pet implements Foul {
     public void respond() {
         System.out.println(this.getNickname() + " ham ham");
     }
+
 }

@@ -6,16 +6,18 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="Homework1" />
-        <module name="Homework2" />
         <module name="Homework3" />
-        <module name="Homework4" />
-        <module name="Homework5" />
-        <module name="Homework6" />
+        <module name="Homework2" />
+        <module name="Homework1" />
         <module name="Homework7" />
-        <module name="Homework8" />
-        <module name="Homework9" />
         <module name="Homework10" />
+        <module name="Homework6" />
+        <module name="Homework5" />
+        <module name="Homework4" />
+        <module name="Homeworkk7" />
+        <module name="Homework9" />
+        <module name="Homework8" />
+        <module name="Homework11" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>

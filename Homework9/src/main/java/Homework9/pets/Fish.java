@@ -20,4 +20,5 @@ public class Fish extends Pet {
     public void respond() {
         System.out.println(this.getNickname() + " is angry to you");
     }
+
 }

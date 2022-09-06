@@ -6,4 +6,5 @@ import Homework9.Human;
 public interface HumanCreator {
 
     Human bornChild(Family family, Human father);
+
 }

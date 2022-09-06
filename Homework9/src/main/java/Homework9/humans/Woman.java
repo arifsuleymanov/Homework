@@ -67,5 +67,6 @@ public class Woman extends Human implements HumanCreator {
         List<String> femaleNames = List.of("Kleopatra", "Anksunamun", "Jennifer", "April", "Catrin");
 
         return (child instanceof Man ) ? maleNames.get(random.nextInt(4)) : femaleNames.get(random.nextInt(4));
+
     }
 }

@@ -104,4 +104,5 @@ public abstract class Pet {
     protected void finalize() throws Throwable {
         System.out.println(this.nickname + " object collected by Garbage Collector");
     }
+
 }

@@ -29,4 +29,5 @@ public class Man extends Human {
     public void swimmingAtPool() {
         System.out.println("Today I am going to swim at pool.");
     }
+
 }
