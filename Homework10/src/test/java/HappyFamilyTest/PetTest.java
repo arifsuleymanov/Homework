@@ -26,4 +26,5 @@ public class PetTest {
         Pet anotherPet = new Fish("Wizik", 12, 78, Set.of("flying", "eating", "sleeping"));
         assertNotEquals(anotherPet, pet);
     }
+
 }

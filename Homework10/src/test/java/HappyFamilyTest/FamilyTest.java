@@ -133,4 +133,5 @@ public class FamilyTest {
         anotherFamily.addChild(fredrich);
         assertNotEquals(happyFamily, anotherFamily);
     }
+
 }

@@ -100,5 +100,6 @@ public class FamilyServiceTest {
         family = service.createNewFamily(mother, father);
         service.bornChild(family);
         assertEquals(1, service.getFamilyById(0).getChildren().size());
+
     }
 }

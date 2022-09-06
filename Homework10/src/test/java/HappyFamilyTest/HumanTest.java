@@ -24,5 +24,6 @@ public class HumanTest {
     void whenTwoObjectNotEqualsReturnSuccess() throws ParseException {
         Human anotherHuman = new Human("Jony", "Smith", "13/08/1910");
         assertNotEquals(human, anotherHuman);
+
     }
 }
