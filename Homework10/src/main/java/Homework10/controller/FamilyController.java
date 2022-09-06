@@ -25,6 +25,26 @@ public class FamilyController {
         familyService.displayAllFamilies();
     }
 
+    public int count () {
+        return familyService.count();
+    }
+
+    public Family bornChild(Family family) throws ParseException {
+        return familyService.bornChild(family);
+    }
+
+    public Family adoptChild(Family family, Human child) {
+        return familyService.adoptChild(family, child);
+    }
+
+    public Family createNewFamily(Woman mother, Man father) {
+        return familyService.createNewFamily(mother, father);
+    }
+
+    public void deleteFamilyByIndex(int index) {
+        familyService.deleteFamilyByIndex(index);
+    }
+
     public List<Family> getFamiliesBiggerThan(int membersCount) {
         return familyService.getFamiliesBiggerThan(membersCount);
     }
@@ -37,28 +57,8 @@ public class FamilyController {
         return familyService.countFamiliesWithMemberNumber(num);
     }
 
-    public Family createNewFamily(Woman mother, Man father) {
-        return familyService.createNewFamily(mother, father);
-    }
-
-    public void deleteFamilyByIndex(int index) {
-        familyService.deleteFamilyByIndex(index);
-    }
-
-    public Family bornChild(Family family) throws ParseException {
-        return familyService.bornChild(family);
-    }
-
-    public Family adoptChild(Family family, Human child) {
-        return familyService.adoptChild(family, child);
-    }
-
     public void deleteAllChildrenOlderThan(int age) {
         familyService.deleteAllChildrenOlderThan(age);
-    }
-
-    public int count () {
-        return familyService.count();
     }
 
     public Family getFamilyById(int index) {
