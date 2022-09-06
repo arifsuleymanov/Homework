@@ -1,4 +1,4 @@
-package Homework9;
+package Homework10;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -51,8 +51,6 @@ public class Family {
     public void setPet(Pet pet) {
         this.pet.add(pet);
     }
-
-
 
     public void addChild(Human child){
         if (child != null) {
