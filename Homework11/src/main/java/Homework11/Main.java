@@ -31,6 +31,7 @@ public class Main {
 
         // controller
         Family familySmith = familyController.createNewFamily(motherJessicca, fatherJohn);
+
         familyController.bornChild(familySmith);
         familyController.adoptChild(smithFamily, adoptedChild);
         familyController.bornChild(smithFamily);
@@ -46,13 +47,17 @@ public class Main {
         familyController.displayAllFamilies();
         familyController.getAllfamilies();
         familyController.count();
-        familyController.getFamiliesBiggerThan(1);
-        familyController.getFamiliesLessThan(1);
+        familyController.getFamiliesBiggerThan(1).forEach(System.out::println);
+        familyController.getFamiliesLessThan(1).forEach(System.out::println);
         familyController.countFamiliesWithMemberNumber(3);
         familyController.deleteFamilyByIndex(0);
         familyController.deleteAllChildrenOlderThan(2);
         familyController.getFamilyById(0);
 //        familyController.getPets(smithFamily);
+
+        System.out.println("decribeAge()");
+        fatherJohn.describeAge();
+
     }
 
     private static FamilyController config() {
