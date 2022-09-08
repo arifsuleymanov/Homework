@@ -1,16 +1,15 @@
-package Homework12;
+package Homework13;
 
-import Homework12.controller.FamilyController;
-import Homework12.dao.entity.CollectionFamilyDao;
-import Homework12.dao.interfaces.FamilyDao;
-import Homework12.humans.Man;
-import Homework12.humans.Woman;
-import Homework12.pets.Dog;
-import Homework12.pets.DomesticCat;
-import Homework12.service.FamilyService;
+import Homework13.controller.FamilyController;
+import Homework13.service.impl.CollectionFamilyDao;
+import Homework13.service.FamilyDao;
+import Homework13.humans.Man;
+import Homework13.humans.Woman;
+import Homework13.pets.Dog;
+import Homework13.pets.DomesticCat;
+import Homework13.service.FamilyService;
 
 import java.text.ParseException;
-import java.util.InputMismatchException;
 import java.util.Scanner;
 import java.util.Set;
 
@@ -29,20 +28,23 @@ public class FamilyApplication {
     private void commands() {
         System.out.println(
                 "\n" +
-                        "****************************************************************************************************************\n"+
-                "   - 1. Fill with test data (create several families and save them in the database)\n" +
-                "   - 2. Display the entire list of families (displays a list of all families with indexation " +
+                "****************************************************************************************************************\n"+
+                "   -  1. Fill with test data (create several families and save them in the database)\n" +
+                "   -  2. Display the entire list of families (displays a list of all families with indexation " +
                        "starting with 1) \n" +
-                "   - 3. Display a list of families where the number of people is greater than the specified number\n" +
-                "   - 4. Display a list of families where the number of people is less than the specified number\n" +
-                "   - 5. Calculate the number of families where the number of members is\n" +
-                "   - 6. Create a new family\n" +
-                "   - 7. Delete a family by its index in the general list\n" +
-                "   - 8. Edit a family by its index in the general list\n" +
-                "        - 1. Give birth to a baby\n" +
-                "        - 2. Adopt a child\n" +
-                "        - 3. Return to main menu '/s \n" +
-                "   - 9. Remove all children over the age of majority\n" +
+                "   -  3. Display a list of families where the number of people is greater than the specified " +
+                        "number\n" +
+                "   -  4. Display a list of families where the number of people is less than the specified number\n" +
+                "   -  5. Calculate the number of families where the number of members is\n" +
+                "   -  6. Create a new family\n" +
+                "   -  7. Delete a family by its index in the general list\n" +
+                "   -  8. Edit a family by its index in the general list\n" +
+                "         - 1. Give birth to a baby\n" +
+                "         - 2. Adopt a child\n" +
+                "         - 3. Return to main menu '/s \n" +
+                "   -  9. Remove all children over the age of majority\n" +
+                "   - 10. Load data from the file\n" +
+                "   - 11. Save data to the file\n" +
                 "   - Exit\n"+
                 "***************************************************************************************************************"
 
@@ -62,7 +64,7 @@ public class FamilyApplication {
             switch (select) {
                 case "1" : {
                     fillWithTestData();
-                    System.out.println("All data successfully saved in the database!");
+                    System.out.println("All data successfully saved in database!");
                 } break;
                 case "2" : {
                     FAMILY_CONTROLLER.displayAllFamilies();
@@ -76,6 +78,8 @@ public class FamilyApplication {
                 case "7" : deleteFamilyById();break;
                 case "8" : editFamily();break;
                 case "9" : FAMILY_CONTROLLER.deleteAllChildrenOlderThan(requestNumberForOperation());break;
+                case "10" : FAMILY_CONTROLLER.loadData();break;
+                case "11" : FAMILY_CONTROLLER.saveData();break;
                 default : System.out.println("Operation doesn't exist, please try again!");
             }
         }
@@ -230,5 +234,13 @@ public class FamilyApplication {
         Human adoptedChild = new Human(name, surname, birthDate, iq);
         adoptedChild.setGender(gender);
         return adoptedChild;
+    }
+
+    private void loadData() {
+        FAMILY_CONTROLLER.loadData();
+    }
+
+    private void saveData() {
+        FAMILY_CONTROLLER.saveData();
     }
 }
